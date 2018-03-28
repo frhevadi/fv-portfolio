@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<!-- NOTE:Page's head that contains the title and links to
+  css files and fonts  -->
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <title>Francia Vasquez | Web Developer</title>
+        <link rel="shortcut icon" type="img/png" href="img/fv-logo.png"/>
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Prociono" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Oregano" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/popup.js"></script>
+    </head>
+    <!-- NOTE: Page's body that contains a header and a main sections -->
+    <body>
+      <!-- NOTE: Header has a full-width div that contains two half-width divs -->
+      <header class="w3-container w3-display-container">
+        <div class="full-width w3-display-top" >
+          <div class="half-width">
+            <a href="https://franvasquez.com">
+            <h1>francia <span>vasquez</span></h1></a>
+          </div>
+          <div class="half-width">
+            <nav>
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- NOTE: Main section has three sections: about, work, and contact -->
+      <main>
+        <!-- NOTE: About section has a full-width div that contains half-width divs -->
+        <section id="about" class="w3-display-container">
+          <div class="full-width w3-display-bottom">
+            <h2 class="lines">A bit about me<span></span></h2>
+            <div class="intro-section">
+              <div class="fourth-width">
+                <img id="contact-img" src="img/fv-photo.png" alt="Contact image"/>
+              </div>
+              <div class="fifth-width">
+                <p>I'm from Colombia and home based in New Jersey. My journey into web development started
+                  with a degree in computer science. Logical thinking, attention to detail, and organization
+                  are my skill set to write clean and neat code. Besides coding, I'm an enthusiastic about art,
+                  meditation, photography & traveling.
+                </p>
+                <ul>
+                  <li><a href="https://www.linkedin.com/in/francia-vasquez" target="_blank">
+                    <img src="img/linkedin.png" alt="LinkedIn icon" class="w3-hover-opacity"/></a>
+                  </li>
+                  <li><a href="https://www.pinterest.com/frhevadi/" target="_blank">
+                    <img src="img/pinterest.png" alt="Pinterest icon" class="w3-hover-opacity"/></a>
+                  </li>
+                  <li><a href="https://www.instagram.com/frhevadi/?hl=en" target="_blank">
+                    <img src="img/instagram.png" alt="Instagram icon" class="w3-hover-opacity"/></a>
+                  </li>
+                  <li><a href="https://unsplash.com/@frhevadi" target="_blank">
+                    <img src="img/camera.png" alt="camera icon" class="w3-hover-opacity"/></a>
+                  </li>
+                  <li>
+                    <p class="popup" onclick="myFunction()">
+                      <span class="popuptext" id="myPopup">coming soon!</span>
+                      <img id="pin" src="img/pin.png" alt="pin-location icon" class="w3-hover-opacity"/>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="full-width w3-display-bottom">
+              <h2 class="lines">What I do<span></span></h2>
+              <div class="skills-section">
+                <div class="third-width w3-panel w3-card-4" id="skill-one">
+                  <img src="img/html-icon.png" alt="html icon"/>
+                  <p>Clean and well-formatted hand-coded HTML to ensure
+                   that the content is readable, accessible, and easy
+                   to trouble-shoot.</p>
+                </div>
+                <div class="third-width w3-panel w3-card-4" id="skill-two">
+                  <img src="img/css-icon.png" alt="css icon"/>
+                  <p>Best current practices are applied to develop a lean
+                   and well-organized CSS code that is fast to load and easy
+                   to read & build on.</p>
+                </div>
+                <div class="third-width w3-panel w3-card-4" id="skill-three">
+                  <img src="img/psd-icon.png" alt="psd icon"/>
+                  <p>Ease converting a designer’s PSD into a webpage
+                    that is pixel-perfect match.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- NOTE: Work section has a full-width div that contains two half-width divs -->
+        <section id="work" class="w3-display-container">
+          <div class="full-width w3-display-bottom">
+            <h2 class="lines">What I've done<span></span></h2>
+            <div class="mySlides">
+              <div class="half-width">
+                  <div class="link-page">
+                    <img src="img/rogue-pickings.png" alt="Rogue Pickings logo"/>
+                    <a href="https://www.franvasquez.com/roguepickings/home.html" target="_blank"></a>
+                  </div>
+              </div>
+              <div class="half-width">
+                <h3>Rogue Pickings</h3>
+                <p>This is a PSD to HTML-CSS conversion project, where every component of the webpage
+                  such as the header, body, and footer were hand-coded to ensure a pixel-perfect
+                  conversion from its design file.
+                </p>
+              </div>
+            </div>
+            <div class="mySlides">
+              <div class="half-width">
+                 <div class="link-page">
+                   <img id="ja-logo" src="img/jubilee-austen.png" alt="jubilee austen logo"/>
+                   <a href="https://www.franvasquez.com/jubilee/index.html" target="_blank"></a>
+                 </div>   
+              </div>
+              <div class="half-width">
+                <h3>Jubilee Austen Portfolio</h3>
+                <p>This is a PSD to HTML-CSS conversion project, where every component of the webpage
+                  such as the header, body, and footer were hand-coded to ensure a pixel-perfect
+                  conversion from its design file.
+                </p>
+              </div>
+            </div>
+            <div class="w3-display-container w3-panel w3-padding-32">
+              <button class="w3-button w3-display-left w3-navy-peony" onclick="plusDivs(-1)">&#10094;</button>
+              <button class="w3-button w3-display-right w3-navy-peony" onclick="plusDivs(1)">&#10095;</button>
+              <script src="scripts/slideshow.js"></script>
+            </div>
+          </div>
+        </section>
+        <!-- NOTE: Footer section has a full-width div that contains two sixth-width divs -->
+        <footer id="contact" class="w3-display-container">
+          <div class="full-width w3-display-bottom">
+            <h2>Get in touch!</h2>
+            <div class="sixth-width">
+              <img src="img/paper-plane.png" alt="airplane image"/>
+              <a href="mailto:hola@franvasquez.com">hola@franvasquez.com</a>
+            </div>
+            <div class="sixth-width">
+              <div id="form-messages"></div>
+              <form id="ajax-contact" method="post" action="mailer.php">
+                <div class="row">
+                  <label>
+                    <input type="text" id="name" name="name" required/>
+                    <div class="label-text">your name</div>
+                  </label>
+                  <label>
+                    <input type="text" id="email" name="email" required/>
+                    <div class="label-text">your email</div>
+                  </label>
+                </div>
+                <div class="row">
+                  <label>
+                    <textarea id="message" name="message" required></textarea>
+                    <div class="label-textarea">drop some words</div>
+                  </label>
+                </div>
+                <div id="button" class="row">
+                  <input type="submit" id="submit" value="send">
+                </div>
+              </form>
+            </div>
+            <span class="w3-display-bottommiddle">&copy;Francia Vasquez 2018</span>
+          </div>
+        </footer>
+      </main>
+    </body>
+</html>

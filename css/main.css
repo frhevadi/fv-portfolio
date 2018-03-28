@@ -1,0 +1,569 @@
+/* Responsive form layout - when the screen is less than 600px wide, make the two
+columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/********  BASE STYLES  ***********/
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #465165;
+}
+
+h2{
+  font-family: 'Oregano', cursive;
+  font-size: 34px;
+  color: #465165;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+ul li{
+  display: inline-block;
+}
+
+/* NOTE: Draws two lines at the end of the headlines */
+.lines {
+  line-height: 0.5;
+  text-align: center;
+}
+
+.lines span {
+  display: inline-block;
+  position: relative;
+}
+
+h2 span::after{
+  content: "";
+  position: absolute;
+  height: 8px;
+  border-bottom: 2px solid #4aa1bf;
+  border-top: 2px solid #465165;
+  top: 0;
+  width: 12px;
+  transform: skewY(-50deg);
+  left: 100%;
+}
+
+/* NOTE: /* Popup container for pin icon ************/
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext{
+    visibility: hidden;
+    width: 110px;
+    background-color: #465165;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%;
+    left: 100%;
+    margin-left: -115px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #465165 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show{
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+/*********  GRID **********/
+
+.full-width{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.half-width{
+  float: left;
+}
+
+.third-width{
+  width: 280px;
+  height: 388px;
+  float: left;
+  margin-right: 14px;
+}
+
+.fourth-width{
+  width: 375px;
+  height: 300px;
+  float: left;
+}
+
+.fifth-width{
+  width: 570px;
+  height: 300px;
+  float: left;
+}
+
+.sixth-width{
+  width: 980px;
+}
+
+/****** HEADER SECTION ***********************************************/
+header{
+  position: relative;
+  height: 900px;
+  background: url('../img/heroe-img.png') no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(50% 100%, 100% 87%, 100% 0, 0 0, 0 87%);
+  clip-path: polygon(50% 100%, 100% 87%, 100% 0, 0 0, 0 87%);
+}
+
+header .full-width{
+  width: 1300px;
+  margin: 0 auto;
+}
+
+header .half-width{
+  width: 650px;
+  float: left;
+}
+
+header h1{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 32px;
+  color: #4aa1bf;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-left: 20px;
+}
+
+header h1 span{
+  color: #465165;
+}
+
+/* NOTE: Navigation menu **********/
+nav{
+  float: right;
+  padding: 70px 45px;
+}
+
+nav ul li a{
+  font-size: 18px;
+  font-weight: 400;
+  color: #465165;
+  padding-left: 50px;
+  text-transform: uppercase;
+}
+
+/****** ABOUT SECTION ***************************************************/
+
+/* NOTE: intro-section ***********************/
+#about{
+  position: relative;
+  height: 1280px;
+}
+
+#about .full-width{
+  padding: 100px 0;
+}
+
+.intro-section{
+  height: 440px;
+  padding-top: 60px;
+  padding-left: 110px;
+  padding-bottom: 60px;
+}
+
+.intro-section p{
+  font-size: 16px;
+  line-height: 30px;
+  padding-top: 30px;
+}
+
+.intro-section #contact-img{
+  max-width: 400px;
+  max-height: 400px;
+  padding-top: 35px;
+  padding-left: 90px;
+}
+
+.intro-section #pin{
+  max-width: 73px;
+  max-height: 73px;
+}
+
+#about ul{
+  margin-top: -15px;
+  padding-left: 2px;
+}
+
+#about img{
+  max-width: 90px;
+  max-height: 90px;
+  padding-right: 50px;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* NOTE: skills-section ***********************/
+.skills-section{
+  height: 520px;
+  padding-top: 80px;
+  padding-left: 150px;
+}
+
+.skills-section p{
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  color: white;
+  padding: 15px;
+}
+
+/* NOTE: skill-one ***************/
+#skill-one{
+  background-color: #9ba9bb;
+}
+
+#skill-one img, #skill-two img{
+  max-width: 220px;
+  max-height: 170px;
+  padding-top: 50px;
+  padding-left: 80px;
+}
+
+/* NOTE: skill-two **************/
+#skill-two{
+  background-color: #47a1bf;
+}
+
+/* NOTE: skill-three ************/
+#skill-three{
+  background-color: #475165;
+}
+
+#skill-three img{
+  max-width: 230px;
+  max-height: 122px;
+  padding-top: 48px;
+  padding-left: 100px;
+}
+
+/******* WORK SECTION ****************************************************/
+#work{
+  background-color: #e5ebee;
+  -webkit-clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  height:800px;
+  padding: 110px 0;
+}
+
+#work .full-width{
+  padding: 60px 50px;
+}
+
+#work .half-width{
+  width: 500px;
+  height: 300px;
+  margin-top: 80px;
+  padding-left: 50px;
+}
+
+#work h3{
+  font-family: 'Prociono', serif;
+  font-size: 24px;
+  padding-left: 10px;
+}
+
+#work .link-page{
+  position: relative;
+}
+
+#work .link-page a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none; /* No underlines on the link */
+  z-index: 10; /* Places the link above everything else in the div */
+  background-color: #FFF; /* Fix to make div clickable in IE */
+  opacity: 0; /* Fix to make div clickable in IE */
+  filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+#work p{
+  line-height: 28px;
+  padding-left: 10px;
+}
+
+#work img{
+  max-width: 500px;
+  max-height: 400px;
+}
+
+#ja-logo{
+  width: 85%;
+  padding-left: 150px;
+}
+
+/******* CONTACT SECTION **************************************************/
+
+#contact{
+  background: url('../img/brooklyn.png') no-repeat;
+  background-size: cover;
+  height:750px;
+  margin-top: -8vw;
+  -webkit-clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
+  padding: 110px 0;
+}
+
+#contact .sixth-width{
+  background-color: rgba(54,54,54,0.8);
+  margin-left: 110px;
+  padding: 40px 47.5px 0 47.5px;
+}
+
+#contact h2{
+  font-size: 36px;
+  color: white;
+}
+
+#contact span{
+  clear: both;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+#contact a{
+  text-decoration: none;
+  color: #47a1bf;
+  font-size: 16px;
+}
+
+#contact img{
+  max-width: 350px;
+  max-height: 350px;
+  padding-left: 300px;
+}
+
+/* NOTE: CONTACT FORM ***************************************/
+
+/* Form layout */
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* NOTE: input textfields and textarea styles ************/
+input[type=text], textarea{
+  background-color: transparent;
+  border: 0;
+  border-bottom: 3px solid #47a1bf;
+  color: white;
+  word-spacing: 2px;
+  outline: 0;
+  padding: 5px 10px;
+  width: 400px;
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: white;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+/* NOTE: Send button style ************/
+#button{
+  padding: 40px 380px;
+}
+
+input[type=submit]{
+  background-color: transparent;
+  border: 4px double #47a1bf;
+  border-radius: 25px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  padding: 15px 27px;
+}
+
+input[type=submit]:hover{
+  background-color: #47a1bf;
+  color: #363636;
+  font-weight: 600;
+}
+
+/* NOTE: Labels and textarea layout ************/
+label{
+  display: block;
+  padding-top: 50px;
+  padding-left: 25px;
+  float: left;
+  word-spacing: 2px;
+}
+
+textarea{
+  height: 80px;
+  width: 825px;
+  resize: none;
+}
+
+/* NOTE: labels style */
+.label-text, .label-textarea{
+  color: white;
+  cursor: text;
+  font-size: 13px;
+  line-height: 9px;
+  padding-left: 10px;
+  transition: all 0.3s; /* NOTE: smooth the label transition from one state to another */
+  text-transform: uppercase;
+}
+
+/* NOTE: The label looks like a standard text placeholder.
+But when focus shifts to the input field, the text moves above it and acts as a label.*/
+.label-text{
+  transform: translateY(-18px); /* NOTE: move the position of the text vertically */
+}
+
+.label-textarea{
+  transform: translateY(-80px);
+}
+
+/* NOTE: the font size will change from large placeholder text to small label text
+when the input and the textarea have focus. */
+/* NOTE: the adjacent sibling combinator (+) separates two selectors and matches the
+second element only if it immediately follows the first element, and both are children
+of the same parent */
+input:focus + .label-text{
+  color: #47a1bf;
+  font-size: 11px;
+  transform: translateY(-45px);
+}
+
+/* NOTE: By placing the 'required' attribute in the input tag, the ‘:valid’ pseudo class
+can evaluate if a value exists in the text field, if so, it will appear valid and a different
+styling can be triggered*/
+input:valid + .label-text{
+  color: #47a1bf;
+  font-size: 11px;
+  transform: translateY(-45px);
+}
+
+input:-moz-ui-invalid + .label-text{
+  box-shadow: none;
+}
+
+input[type=text]:-moz-ui-invalid{
+  box-shadow: none;
+   /* border-bottom: 3px solid #db594b; */
+}
+
+textarea:focus + .label-textarea{
+  color: #47a1bf;
+  font-size: 11px;
+  transform: translateY(-103px);
+}
+
+textarea:valid + .label-textarea{
+  color: #47a1bf;
+  font-size: 11px;
+  transform: translateY(-103px);
+}
+
+textarea:-moz-ui-invalid + .label-textarea{
+  box-shadow: none;
+  /* color: #db594b;
+  font-size: 11px;
+  transform: translateY(-103px); */
+}
+
+textarea:-moz-ui-invalid{
+  box-shadow: none;
+  /* border-bottom: 3px solid #db594b; */
+}
+
+/* NOTE: Style for error messages ***************/
+#form-messages{
+  width: 800px;
+  height: 40px;
+  margin-left: 45px;
+  padding-top: 10px;
+}
+
+.success {
+  font-size: 16px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.error {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #b94a48;
+  background-color: #f2dede;
+  border: 1px solid rgba(185, 74, 72, 0.3);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
