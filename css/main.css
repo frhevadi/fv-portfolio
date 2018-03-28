@@ -171,15 +171,20 @@ header .half-width{
 
 header h1{
   font-family: 'Kaushan Script', cursive;
-  font-size: 32px;
+  font-size: 24px;
   color: #4aa1bf;
   margin: 0 auto;
-  padding-top: 70px;
-  padding-left: 20px;
 }
 
 header h1 span{
   color: #465165;
+}
+
+header img{
+  margin-left: 25px;
+  max-width: 150px;
+  max-height: 150px;
+  padding-top: 60px;
 }
 
 /* NOTE: Navigation menu **********/
@@ -350,29 +355,30 @@ nav ul li a{
 /******* CONTACT SECTION **************************************************/
 
 #contact{
-  background: url('../img/brooklyn.png') no-repeat;
+  background: url('../img/desk.png') no-repeat;
   background-size: cover;
-  height:750px;
+  height:1000px;
   margin-top: -8vw;
   -webkit-clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
-  padding: 110px 0;
+  padding: 130px 0;
 }
 
 #contact .sixth-width{
-  background-color: rgba(54,54,54,0.8);
-  margin-left: 110px;
-  padding: 40px 47.5px 0 47.5px;
+  /* background-color: rgba(54,54,54,0.5); */
+  margin-left: 120px;
+  padding: 20px 47.5px 0 47.5px;
 }
 
 #contact h2{
   font-size: 36px;
   color: white;
+  margin-bottom: 90px;
 }
 
 #contact span{
   clear: both;
-  color: white;
+  color: gray;
   font-size: 12px;
   text-align: center;
   padding-bottom: 5px;
